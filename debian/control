@@ -1,0 +1,20 @@
+Source: proxmox-utils
+Section: python
+Priority: extra
+Maintainer: Michael Prokop <github@michael-prokop.at>
+Build-Depends: debhelper (>= 7), python, python-setuptools
+Standards-Version: 3.9.3
+Homepage: https://github.com/remofritzsche/proxmox-utils/
+
+Package: proxmox-utils
+Architecture: all
+Depends: python,
+         qemu-server,
+         ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends}
+Recommends: pve-cluster
+Description: shell (python) scripts for managing proxmox virtual environment
+ This package provides scripts like kvm-clone, kvm-remove,
+ kvm-create-template, kvm-list-templates and kvm-activate-template
+ to make managing VMs on Proxmox cluster systems easier.
